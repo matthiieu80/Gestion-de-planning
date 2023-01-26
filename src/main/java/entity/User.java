@@ -5,7 +5,7 @@ import jakarta.persistence.*;
 import java.io.Serializable;
 
 @Entity
-public class User implements Serializable {
+public class User {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -15,9 +15,9 @@ public class User implements Serializable {
     private String firstName;
     @Column(name = "prenom")
     private  String lastName;
-
+    @Column(name = "Nom utilisateur")
     private  String nomUtilisateur;
-
+    @Column(name = "Mot de passe")
     private  String passWord;
 
     public void setId(Long id) {
